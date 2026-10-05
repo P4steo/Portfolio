@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paweł — 3D Artist &amp; UE5 Blueprint Developer</title>
-<meta name="description" content="Portfolio of Paweł, 3D Artist and UE5 Blueprint Developer based in Gdańsk, Poland.">
+<title>Paweł Beiger — 3D Artist &amp; UE5 Blueprint Developer</title>
+<meta name="description" content="Portfolio of Paweł Beiger — 3D Artist and UE5 Blueprint Developer based in Gdańsk, Poland. Game art, Unreal Engine 5 work and the web tools I build on the side.">
+<meta property="og:title" content="Paweł Beiger — 3D Artist &amp; UE5 Blueprint Developer">
+<meta property="og:description" content="Game art, Unreal Engine 5 projects and the web tools I build on the side.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#12141a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,15 +16,17 @@
 </head>
 <body>
 
+<a class="skip-link" href="#work">Skip to projects</a>
 <div class="grid-overlay" aria-hidden="true"></div>
 
 <header class="site-header">
-  <div class="corner corner-tl" aria-hidden="true">01</div>
-  <nav class="nav">
-    <span class="nav-mark">PW / PORTFOLIO</span>
-    <ul class="nav-links">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-mark" href="#top">PW / PORTFOLIO</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#work">3D Work</a></li>
+      <li><a href="#code">Code</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -31,19 +37,39 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <p class="eyebrow">FIG. 00 — VIEWPORT / PERSPECTIVE</p>
-    <h1 class="hero-title">
-      Paweł <span class="hero-title-sub">builds worlds<br>vertex by vertex.</span>
-    </h1>
-    <p class="hero-lede">
-      3D Artist &amp; UE5 Blueprint Developer based in Gdańsk, Poland. I model, texture,
-      rig and wire up the systems that make a scene feel alive — from a single asset
-      in Blender to a playable level in Unreal Engine 5.
-    </p>
+    <div class="hero-text">
+      <p class="eyebrow">FIG. 00 — VIEWPORT / PERSPECTIVE</p>
+      <h1 class="hero-title">
+        Paweł <span class="hero-title-sub">builds worlds<br>vertex by vertex.</span>
+      </h1>
+      <p class="hero-lede">
+        3D Artist &amp; UE5 Blueprint Developer based in Gdańsk, Poland. I model and
+        texture assets in Blender and Substance Painter, then wire them into playable
+        scenes in Unreal Engine 5. On the side I ship small web tools that people
+        actually use.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">See 3D work</a>
+        <a class="btn" href="cv.html">Open CV</a>
+      </div>
+    </div>
+
+    <figure class="hero-viewport" aria-hidden="true">
+      <span class="viewport-corner tl"></span>
+      <span class="viewport-corner tr"></span>
+      <span class="viewport-corner bl"></span>
+      <span class="viewport-corner br"></span>
+      <span class="hv-label hv-top">Perspective · Wireframe</span>
+      <svg class="mesh" viewBox="-130 -130 260 260" id="mesh"></svg>
+      <svg class="gizmo" viewBox="-30 -30 60 60" id="gizmo"></svg>
+      <span class="hv-label hv-bottom" id="mesh-stats">Verts 42 · Faces 80 · Tris 80</span>
+    </figure>
+
     <div class="hero-meta">
       <span class="meta-item"><span class="meta-label">Based in</span>Gdańsk, PL</span>
       <span class="meta-item"><span class="meta-label">Focus</span>3D Art · UE5 Blueprints</span>
-      <span class="meta-item"><span class="meta-label">Status</span>Open to opportunities</span>
+      <span class="meta-item"><span class="meta-label">Studying</span>MSc Game Design, DSW</span>
+      <span class="meta-item"><span class="meta-label">Status</span><span><span class="status-dot"></span>Open to opportunities</span></span>
     </div>
   </section>
 
@@ -84,27 +110,36 @@
           <li>Team Production Workflow</li>
         </ul>
       </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">Code &amp; Web</h3>
+        <ul class="skill-tags">
+          <li>Python · FastAPI</li>
+          <li>JavaScript · HTML · CSS</li>
+          <li>PHP</li>
+          <li>Web scraping (BeautifulSoup)</li>
+          <li>GitHub Pages · Render · Cloudflare</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- WORK -->
+  <!-- 3D WORK -->
   <section class="work" id="work">
     <p class="section-label">FIG. 02 — SELECTED WORK</p>
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">3D &amp; Game Projects</h2>
 
     <div class="project-list">
 
       <article class="project">
-        <div class="project-viewport">
+        <a class="project-viewport" href="https://www.artstation.com/artwork/WdKYmG" target="_blank" rel="noopener">
           <span class="viewport-corner tl"></span>
           <span class="viewport-corner tr"></span>
           <span class="viewport-corner bl"></span>
           <span class="viewport-corner br"></span>
           <span class="viewport-id">VIEWPORT_01</span>
-          <a class="viewport-link" href="https://www.artstation.com/artwork/WdKYmG" target="_blank" rel="noopener">
-            View Quill →
-          </a>
-        </div>
+          <span class="viewport-cross" aria-hidden="true"></span>
+          <span class="viewport-link">View Quill on ArtStation</span>
+        </a>
         <div class="project-body">
           <h3 class="project-title">Toyshift</h3>
           <p class="project-desc">
@@ -121,23 +156,23 @@
           </ul>
         </div>
       </article>
-      
+
       <article class="project">
-        <div class="project-viewport">
+        <a class="project-viewport" href="https://www.artstation.com/artwork/b0KZkv" target="_blank" rel="noopener">
           <span class="viewport-corner tl"></span>
           <span class="viewport-corner tr"></span>
           <span class="viewport-corner bl"></span>
           <span class="viewport-corner br"></span>
           <span class="viewport-id">VIEWPORT_01_1</span>
-          <a class="viewport-link" href="https://www.artstation.com/artwork/b0KZkv" target="_blank" rel="noopener">
-            View Bramble →
-          </a>
-        </div>
+          <span class="viewport-cross" aria-hidden="true"></span>
+          <span class="viewport-link">View Bramble on ArtStation</span>
+        </a>
         <div class="project-body">
           <h3 class="project-title">Toyshift: Bramble</h3>
           <p class="project-desc">
-            Bramble is another character from the ToyShift series, 
-            presented as a toy-like LEGO minifigure in a very unconventional interpretation — just like Agent 47.
+            Bramble is another character from the Toyshift series, presented as a
+            toy-like LEGO minifigure in a very unconventional interpretation — just
+            like Agent 47.
           </p>
           <ul class="project-tags">
             <li>Blender</li>
@@ -148,19 +183,18 @@
             <li>Unreal Engine 5</li>
           </ul>
         </div>
-  </article>
+      </article>
 
       <article class="project">
-        <div class="project-viewport">
+        <a class="project-viewport" href="https://www.artstation.com/artwork/O3qlDg" target="_blank" rel="noopener">
           <span class="viewport-corner tl"></span>
           <span class="viewport-corner tr"></span>
           <span class="viewport-corner bl"></span>
           <span class="viewport-corner br"></span>
           <span class="viewport-id">VIEWPORT_02</span>
-          <a class="viewport-link" href="https://www.artstation.com/artwork/O3qlDg" target="_blank" rel="noopener">
-            View Retro Rocket →
-          </a>
-        </div>
+          <span class="viewport-cross" aria-hidden="true"></span>
+          <span class="viewport-link">View Retro Rocket on ArtStation</span>
+        </a>
         <div class="project-body">
           <h3 class="project-title">Retro Rocket</h3>
           <p class="project-desc">
@@ -179,15 +213,14 @@
       </article>
 
       <article class="project">
-        <div class="project-viewport">
+        <div class="project-viewport is-static">
           <span class="viewport-corner tl"></span>
           <span class="viewport-corner tr"></span>
           <span class="viewport-corner bl"></span>
           <span class="viewport-corner br"></span>
           <span class="viewport-id">VIEWPORT_03</span>
-          <a class="viewport-link" href="#" target="_blank" rel="noopener">
-            Engineer's Thesis
-          </a>
+          <span class="viewport-cross" aria-hidden="true"></span>
+          <span class="viewport-note">Engineer's thesis<br><small>Media coming soon</small></span>
         </div>
         <div class="project-body">
           <h3 class="project-title">Dobrava: Tales of Slavic Myths</h3>
@@ -200,23 +233,157 @@
           <ul class="project-tags">
             <li>Blender</li>
             <li>Substance Painter</li>
+            <li>Unreal Engine 5</li>
             <li>MetaHuman</li>
           </ul>
         </div>
       </article>
-</div>
-</section>
+
+      <article class="project">
+        <a class="project-viewport" href="https://github.com/P4steo/Motion-Capture-App" target="_blank" rel="noopener">
+          <span class="viewport-corner tl"></span>
+          <span class="viewport-corner tr"></span>
+          <span class="viewport-corner bl"></span>
+          <span class="viewport-corner br"></span>
+          <span class="viewport-id">VIEWPORT_04</span>
+          <span class="viewport-cross" aria-hidden="true"></span>
+          <span class="viewport-link">View on GitHub</span>
+        </a>
+        <div class="project-body">
+          <h3 class="project-title">Motion Capture App <span class="badge badge-wip">In progress</span></h3>
+          <p class="project-desc">
+            A webcam motion-capture tool I wrote to feed my own animation work.
+            MediaPipe tracks the body in real time, the app previews the skeleton,
+            and exports the take as JSON or as a <code>.bvh</code> mapped to the
+            Unreal Engine 5 / Blender bone hierarchy — ready for
+            File → Import → Motion Capture.
+          </p>
+          <ul class="project-tags">
+            <li>Python</li>
+            <li>MediaPipe</li>
+            <li>OpenCV</li>
+            <li>PyQt5</li>
+            <li>BVH Export</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CODE -->
+  <section class="code" id="code">
+    <p class="section-label">FIG. 03 — OUTLINER / SIDE PROJECTS</p>
+    <h2 class="section-title">Code &amp; Web Tools</h2>
+    <p class="section-intro">
+      Things I built because I needed them — and kept running because other people
+      started using them too. Everything here is live or public on GitHub.
+    </p>
+
+    <!-- Featured: CzytelneCV -->
+    <article class="feature">
+      <div class="feature-head">
+        <span class="badge badge-live">Live</span>
+        <span class="feature-path">czytelnecv.pl</span>
+      </div>
+      <div class="feature-grid">
+        <div>
+          <h3 class="feature-title">CzytelneCV</h3>
+          <p class="feature-desc">
+            A free Polish CV builder I design, build and run myself. The idea: a CV
+            that both a recruiter and an applicant tracking system can read. No sign-up
+            needed — you pick a template, fill in a form and export a clean PDF with no
+            watermark. Your data stays in your browser.
+          </p>
+          <ul class="feature-points">
+            <li>Built-in ATS test that shows how a parser reads your CV, in order, and flags problems</li>
+            <li>Cover letter generator that reuses your CV data</li>
+            <li>Job application tracker, synced across devices with passwordless login</li>
+            <li>Import from .docx and PDF, keyword matching against a job posting</li>
+          </ul>
+          <div class="feature-actions">
+            <a class="btn btn-primary" href="https://czytelnecv.pl" target="_blank" rel="noopener">Visit czytelnecv.pl</a>
+          </div>
+        </div>
+        <dl class="feature-stats">
+          <div><dt>Templates</dt><dd>40</dd></div>
+          <div><dt>Free to use</dt><dd>28</dd></div>
+          <div><dt>Languages</dt><dd>PL / EN</dd></div>
+          <div><dt>Hosting</dt><dd>Cloudflare</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- Outliner list -->
+    <div class="outliner" role="list">
+      <div class="outliner-head" aria-hidden="true">
+        <span>Project</span><span>Stack</span><span>Status</span><span>Links</span>
+      </div>
+
+      <article class="outliner-row" role="listitem">
+        <div class="ol-name">
+          <h3>EduFlow</h3>
+          <p>
+            Class schedule app for DSW students. A FastAPI backend scrapes the official
+            timetable and turns it into JSON; the front end finds your next weekend
+            session, filters by group, highlights what's on right now, marks cancelled
+            classes and works offline.
+          </p>
+        </div>
+        <ul class="ol-stack"><li>Python</li><li>FastAPI</li><li>BeautifulSoup</li><li>Vanilla JS</li><li>PWA</li></ul>
+        <span class="ol-status"><span class="badge badge-live">Live</span></span>
+        <div class="ol-links">
+          <a href="https://p4steo.github.io/EduFlow/" target="_blank" rel="noopener">Open app</a>
+          <a href="https://github.com/P4steo/EduFlow" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="outliner-row" role="listitem">
+        <div class="ol-name">
+          <h3>MadComms</h3>
+          <p>
+            A tiny companion for CS2. Copy whatever your teammate typed, press a hotkey,
+            and a small always-on-top window shows the DeepL translation — no overlay
+            injected into the game.
+          </p>
+        </div>
+        <ul class="ol-stack"><li>Python</li><li>DeepL API</li><li>Tkinter</li></ul>
+        <span class="ol-status"><span class="badge">Released</span></span>
+        <div class="ol-links">
+          <a href="https://github.com/P4steo/MadComms" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="outliner-row" role="listitem">
+        <div class="ol-name">
+          <h3>WeatherAroundMe</h3>
+          <p>
+            A local rain-monitoring service built on the Gdańskie Wody measurement
+            API, structured as a FastAPI microservice and headed for a Raspberry Pi
+            as a small home weather hub.
+          </p>
+        </div>
+        <ul class="ol-stack"><li>Python</li><li>FastAPI</li><li>Raspberry Pi</li></ul>
+        <span class="ol-status"><span class="badge badge-wip">In progress</span></span>
+        <div class="ol-links">
+          <a href="https://github.com/P4steo/WeatherAroundMe" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="code-more">More on <a href="https://github.com/P4steo" target="_blank" rel="noopener">github.com/P4steo</a></p>
+  </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <p class="section-label">FIG. 03 — CONTACT</p>
+    <p class="section-label">FIG. 04 — CONTACT</p>
     <h2 class="section-title">Let's build something.</h2>
     <p class="contact-lede">
       Open to 3D Artist and Game Artist roles, and always happy to talk shop about
       Blueprints, rigs, or props that refuse to unwrap cleanly.
     </p>
     <div class="contact-links">
-      <a href="mailto:beigerpawel@gmail.com" class="contact-link">Email</a>
+      <a href="mailto:beigerpawel@gmail.com" class="contact-link contact-link-primary">beigerpawel@gmail.com</a>
       <a href="https://linkedin.com/in/pawelbeiger" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://www.artstation.com/actorn" class="contact-link" target="_blank" rel="noopener">ArtStation</a>
       <a href="https://github.com/P4steo" class="contact-link" target="_blank" rel="noopener">GitHub</a>
@@ -227,7 +394,7 @@
 </main>
 
 <footer class="site-footer">
-  <span>© <span id="year"></span> Paweł — 3D Art &amp; UE5 Development</span>
+  <span>© <span id="year"></span> Paweł Beiger — 3D Art &amp; UE5 Development</span>
   <span class="footer-mark">END OF FILE</span>
 </footer>
 
